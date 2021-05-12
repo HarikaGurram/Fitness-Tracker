@@ -1,0 +1,18 @@
+mat-toolbar {
+  .mat-nav-list {
+    padding-top: 0;
+  }
+  a {
+    color: white;
+  }
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+  }
+}

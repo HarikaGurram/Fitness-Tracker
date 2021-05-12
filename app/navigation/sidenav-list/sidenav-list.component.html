@@ -1,0 +1,44 @@
+<button (click)="onClose()" mat-icon-button>
+  <mat-icon color="accent">close</mat-icon>
+</button>
+<mat-nav-list>
+  <a mat-list-item routerLink="/signup" (click)="onClose()" *ngIf="!(isAuth$ | async)">
+    <mat-icon>face</mat-icon>
+    <span class="nav-caption">Signup</span>
+  </a>
+  <a mat-list-item routerLink="/login" (click)="onClose()" *ngIf="!(isAuth$ | async)">
+    <mat-icon>input</mat-icon>
+    <span class="nav-caption">Login</span>
+  </a>
+  <a mat-list-item routerLink="/training" (click)="onClose()" *ngIf="isAuth$ | async">
+    <mat-icon>fitness_center</mat-icon>
+    <span class="nav-caption">Training</span>
+  </a>
+
+  <a mat-list-item routerLink="/videos" (click)="onClose()" *ngIf="isAuth$ | async">
+    <mat-icon>switch_video</mat-icon>
+    <span class="nav-caption">Videos</span>
+  </a>
+
+  <a mat-list-item routerLink="/workout" (click)="onClose()" *ngIf="isAuth$ | async">
+    <mat-icon>switch_video</mat-icon>
+    <span class="nav-caption">Workouts</span>
+  </a>
+
+  <a mat-list-item routerLink="/search" (click)="onClose()" *ngIf="isAuth$ | async">
+    <mat-icon>switch_video</mat-icon>
+    <span class="nav-caption">SearchChannels</span>
+  </a>
+
+  <a mat-list-item routerLink="/contact" (click)="onClose()" *ngIf="isAuth$ | async">
+    <mat-icon>switch_video</mat-icon>
+    <span class="nav-caption">ContactUs</span>
+  </a>
+
+  <mat-list-item>
+    <button mat-icon-button (click)="onLogout()" *ngIf="isAuth$ | async">
+      <mat-icon>eject</mat-icon>
+      <span class="nav-caption">Logout</span>
+    </button>
+  </mat-list-item>
+</mat-nav-list>
